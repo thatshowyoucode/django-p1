@@ -5,9 +5,9 @@ def index(request):
     }
     return render(request, 'index.html' , context)
     # return HttpResponse("this is homepage")
-
+from django.shortcuts import redirect
 def about(request):
-    return HttpResponse("this is about page")
+    return redirect ("https://www.instagram.com/thatshowyoucode.y?igsh=MnV6ajBoM252cnds")
 
 def services(request):
     return HttpResponse("this is services page")
