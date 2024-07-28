@@ -3,17 +3,14 @@ from django.shortcuts import render, HttpResponse
 def index(request):
     context = {
     }
-    return render(request, 'index.html' , context)
+    return render(request, 'index.html')
     # return HttpResponse("this is homepage")
-from django.shortcuts import redirect
 def about(request):
-    return redirect ("https://www.instagram.com/thatshowyoucode.y?igsh=MnV6ajBoM252cnds")
+    return render(request, 'about.html')
+    # return redirect ("https://www.instagram.com/thatshowyoucode.y?igsh=MnV6ajBoM252cnds")
 
 def services(request):
-    return HttpResponse("this is services page")
+    return render(request, 'services.html')
 
 def contact(request):
-    return HttpResponse("this is my contact")
-
-def hi(request):
-    return HttpResponse("helooooo ") 
+    return render(request, 'contact.html')
